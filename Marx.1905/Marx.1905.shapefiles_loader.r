@@ -56,7 +56,7 @@ plot(lac.p, col="white", add=TRUE) # Major lakes polygons object plotted;
 dev.off() # Optional, to clean the graphical device, as the map() function changes the default graphical console parameters;
 
 # Europe with no underlying 'map';
-plot(cont.p, col=3, xlim=c(-10,60), ylim=c(35,75)) # Countinents polygons object plotted (focus on Europe); 
+plot(cont.p, col=3, xlim=c(-10,60), ylim=c(35,75)) # Continents polygons object plotted (focus on Europe); 
 plot(cnt.p, col=3, add=TRUE) # Countries polygons object plotted;
 plot(lac.p, col="white", add=TRUE) # Major lakes polygons object plotted;
 plot(gvt.p, col=2, add=TRUE) # Governorates polygons object plotted;
