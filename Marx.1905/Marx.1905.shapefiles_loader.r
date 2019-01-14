@@ -15,6 +15,10 @@ library(rgdal)
 # Loading shapefiles as separate R objects;
 ################################################################
 
+# Eurasia and Africa background landmass lines and polygon;
+cont.l <- readOGR("Marx.1905.Continents.lines/Marx.1905.Continents.lines.shp")
+cont.p <- readOGR("Marx.1905.Continents.polygons/Marx.1905.Continents.polygons.shp")
+
 # Countries of Eurasia (including some extensions beyond Eurasia) as borderlines and polygons;
 cnt.l <- readOGR("Marx.1905.Countries.lines/Marx.1905.Countries.lines.shp")
 cnt.p <- readOGR("Marx.1905.Countries.polygons/Marx.1905.Countries.polygons.shp")
@@ -41,21 +45,23 @@ bher.p <- readOGR("Marx.1905.Occupied_Ottoman_Dependencies.polygons/Marx.1905.Oc
 # World map showing the extent of the shapefiles;
 map(fill=TRUE, col=8, border=8) # Basic world map with borders suppressed;
 plot(cnt.p, col=3, add=TRUE) # Countries polygons object plotted;
-plot(lac.p, col="cyan", add=TRUE) # Major lakes polygons object plotted;
+plot(lac.p, col="white", add=TRUE) # Major lakes polygons object plotted;
 dev.off() # Optional, to clean the graphical device, as the map() function changes the default graphical console parameters;
 
 # Europe;
 map(fill=TRUE, col=8, border=8, xlim=c(-10,60), ylim=c(35,75)) # Basic world map with borders suppressed (focus on Europe);
 plot(cnt.p, col=3, add=TRUE) # Countries polygons object plotted;
 plot(gvt.p, col=2, add=TRUE) # Governorates polygons object plotted;
-plot(lac.p, col="cyan", add=TRUE) # Major lakes polygons object plotted;
+plot(lac.p, col="white", add=TRUE) # Major lakes polygons object plotted;
 dev.off() # Optional, to clean the graphical device, as the map() function changes the default graphical console parameters;
 
 # Europe with no underlying 'map';
-plot(cnt.p, col=3, xlim=c(-10,60), ylim=c(35,75)) # Countries polygons object plotted (focus on Europe);
+plot(cont.p, col=3, xlim=c(-10,60), ylim=c(35,75)) # Countinents polygons object plotted (focus on Europe); 
+plot(cnt.p, col=3, add=TRUE) # Countries polygons object plotted;
+plot(lac.p, col="white", add=TRUE) # Major lakes polygons object plotted;
 plot(gvt.p, col=2, add=TRUE) # Governorates polygons object plotted;
 
 # Boundaries old and new juxaposed;
 map(fill=TRUE, col=8, xlim=c(-10,60), ylim=c(35,75)) # Basic world map with borders (focus on Europe);
 plot(cnt.l, col=2, add=TRUE) # Countries lines object plotted;
-plot(lac.p, col="cyan", add=TRUE) # Major lakes object plotted;
+plot(lac.p, col="white", add=TRUE) # Major lakes object plotted;
