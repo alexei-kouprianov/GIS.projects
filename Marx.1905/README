@@ -1,0 +1,20 @@
+To cite this set of shapefiles in publications use:
+
+  Kouprianov, A. (2019). Marx.1905: Shapefiles of Russian Empire and Countries 
+  of Eurasia based on Marx' 1905 folio World Atlas for the use with 
+  historical datasets. 
+  URL https://github.com/alexei-kouprianov/GIS.projects/tree/master/Marx.1905
+
+A BibTeX entry for LaTeX users is:
+
+@Manual{,
+    title = {Marx.1905: A map of Russian Empire and Countries of Eurasia based on Marx' 1905 folio World Atlas for the use with historical datasets},
+    author = {Kouprianov, Alexei},
+    year = {2019},
+    note = {ESRI Shapefiles},
+    url = {https://github.com/alexei-kouprianov/GIS.projects/tree/master/Marx.1905},
+  }
+
+I have invested a considerable amount of time and effort in creating 
+this free set of shapefiles, please cite it when using it for data 
+analysis.
